@@ -1,9 +1,17 @@
 import React from 'react';
 
-export default class App extends React.Component {
+class WelcomeComp extends React.Component {
   render() {
-    return <h1>Welcome to Class Component</h1>;
+    return <h1>Welcome to Reusable Component</h1>;
   }
 }
 
-//export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <WelcomeComp />
+      </div>
+    );
+  }
+}
