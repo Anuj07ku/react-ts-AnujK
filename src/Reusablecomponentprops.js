@@ -2,16 +2,16 @@ import React from 'react';
 
 class WelcomeComp extends React.Component {
   render() {
-    return <h1>Welcome to Reusable Component</h1>;
+    return <h1>Animal name {this.props.childern} and Type {this.props.Type}</h1>;
   }
 }
 
 export default class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <WelcomeComp />
-      </React.Fragment>
+      <>
+        <WelcomeComp Type = "Wild" />Tiger</WelcomeComp>
+      </>
     );
   }
 }
