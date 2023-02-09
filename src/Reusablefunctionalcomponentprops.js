@@ -1,15 +1,12 @@
 import React from 'react';
-
-class WelcomeComp extends React.Component {
-  render() {
-    return (
-      <p>
-        <h3>Animal Name {this.props.children}</h3>
-        Type {this.props.Type}
-      </p>
-    );
-  }
-}
+const WelcomeComp = (props) => {
+  return (
+    <p>
+      <h3>Animal Name {props.children}</h3>
+      Type {props.Type}
+    </p>
+  );
+};
 
 export default class App extends React.Component {
   render() {
