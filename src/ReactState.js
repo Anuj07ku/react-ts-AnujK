@@ -21,7 +21,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    let role = this.state.bmamanger ? 'Manager' : 'employee';
+    let role = this.state.bmamanger ? 'Manager' : 'Employee';
     return (
       <>
         <h1>React State </h1>
@@ -36,6 +36,9 @@ export default class App extends React.Component {
           checked={this.state.bmamanger}
           onClick={() => this.handleCheckbox()}
         />
+        <p>
+          {this.state.empname} is {role}
+        </p>
       </>
     );
   }
