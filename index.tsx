@@ -7,7 +7,8 @@ import { createRoot } from 'react-dom/client';
 //import App from './src/classtest';
 //import App from './src/Reusablecomponent';
 //import App from './src/Reusablefunctionalcomponentprops';
-import App from './src/EventHandler';
+//import App from './src/EventHandler';
+import App from './src/ReactState';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
