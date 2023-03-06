@@ -24,7 +24,7 @@ export default class App extends React.Component {
         <input ref={this.refLocation} type="text" />
         <br />
         <button type="Button" onClick={() => this.handleSubmit()}>
-          Submit{' '}
+          Submit
         </button>
       </>
     );
