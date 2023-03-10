@@ -1,0 +1,7 @@
+export default {
+  comments: [
+    { author: 'John', id: 1, city: 'Delhi' },
+    { author: 'Anuj', id: 2, city: 'Nodia' },
+    { author: 'Sunil', id: 3, city: 'Gurgaon' },
+  ],
+};
