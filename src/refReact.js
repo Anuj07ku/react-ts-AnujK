@@ -10,8 +10,9 @@ export default class App extends React.Component {
   handleSubmit = () => {
     let Name = this.refName.current.value;
     let Location = this.refLocation.current.value;
+    alert(`Name is ${Name} and Location  is ${Location}`);
+
     this.refLocation.current.focus();
-    alert('Name = ${Name} and Location = ${Location}');
   };
 
   render() {
