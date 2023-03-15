@@ -12,7 +12,8 @@ import { createRoot } from 'react-dom/client';
 //import App from './src/refReact';
 //import App from './src/propType';
 //import App from './src/reactLifecycle';
-import App from './src/reactComposablecomponent/reusablecomponent';
+//import App from './src/reactComposablecomponent/reusablecomponent';
+import App from './src/HOC/Component/CustomerListNormal';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
