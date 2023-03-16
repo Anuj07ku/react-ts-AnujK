@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class CustomerList extends React.Component {
+export default class CustomerList extends React.Component {
   render() {
     const { itemInput, items, handleitemInput, additem } = this.props;
     let Itemlist = items.map((item, index) => <li key={index}> {item} </li>);
@@ -22,5 +22,3 @@ class CustomerList extends React.Component {
     );
   }
 }
-
-export default Withitem(CustomerList);

@@ -3,7 +3,7 @@ import CustomerList from './components/CustomerList';
 import EmployeeList from './components/EmployeeList';
 import Item from './components/Item';
 
-export default class rendProps extends React.Component {
+export default class RProp extends React.Component {
   render() {
     return (
       <>
