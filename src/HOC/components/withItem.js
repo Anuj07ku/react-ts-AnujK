@@ -30,7 +30,6 @@ const withItem = (WrappedContent) => {
           items={this.state.items}
           handleitemInput={this.handleitemInput}
           additem={this.additem}
-          {...this.props}
         />
       );
     }
