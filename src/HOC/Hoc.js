@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CustomerList from './Component/CustomerList';
-import EmployeeList from './Component/EmployeeList';
+import CustomerList from './components/CustomerList';
+import EmployeeList from './components/EmployeeList';
 
 export default class Hoc extends React.Component {
   render() {

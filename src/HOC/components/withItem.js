@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Comment } from 'react';
 
 const withItem = (WrappedContent) => {
   class WithItem extends React.Component {
@@ -6,7 +6,7 @@ const withItem = (WrappedContent) => {
       super(props);
       this.state = {
         itemInput: '',
-        item: [],
+        items: [],
       };
 
       this.handleitemInput = this.handleitemInput.bind(this);
@@ -14,12 +14,12 @@ const withItem = (WrappedContent) => {
     }
 
     handleitemInput = (event) => {
-      this.setState({ customername: event.target.value });
+      this.setState({ itemInput: event.target.value });
     };
 
     additem = (itemname) => {
       this.setState((prestate) => {
-        return { Customers: [...prestate.Customers, itemname] };
+        return { items: [...prestate.items, itemname] };
       });
     };
 
@@ -27,7 +27,7 @@ const withItem = (WrappedContent) => {
       return (
         <WrappedContent
           itemInput={this.state.itemInput}
-          items={this.state.itemInput}
+          items={this.state.items}
           handleitemInput={this.handleitemInput}
           additem={this.additem}
           {...this.props}
