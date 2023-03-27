@@ -9,9 +9,11 @@ const EmployFormFormixYup = ({ error }) => (
       <div>
         Employee Name
         <Field type="text" name="empName" />
+        {error.empName}
         <br />
         Employee
         <Field type="checkbox" name="manager" />
+        {error.empName}
         <br />
         <button type="submit">Submit </button>
       </div>
@@ -24,14 +26,14 @@ const EmployForm = withFormik({
     return {
       empName: empName || '',
       manager: manager || false,
-    }
+    };
   },
 
   validationSchema: Yup.object().shape({
     empName: Yup.string()
       .min(5, 'Employee Name Must be 5 charector long')
       .required('Employee field can not be blank'),
-  }),
+  })
 })(EmployFormFormixYup);
 
 export default EmployForm;
