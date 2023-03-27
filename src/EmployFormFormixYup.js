@@ -1,9 +1,10 @@
 import React from 'react';
 import { withFormik, Field } from 'formik';
+import * as Yup from 'yup';
 
-const EmployFormFormix = ({ values }) => (
+const EmployFormFormixYup = ({ values }) => (
   <div>
-    <h1> Employee Form Formik</h1>
+    <h1> Employee Form Formik Validation </h1>
     <form>
       <div>
         Employee Name
@@ -24,7 +25,13 @@ const EmployForm = withFormik({
       empName: empName || '',
       manager: manager || false,
     };
+
+    validationSchema: Yup.object().shape({
+      empName: Yup.string()
+        .min(5, 'Employee Name Must be 5 charector long')
+        .required('Employee field can not be blank'),
+    });
   },
-})(EmployFormFormix);
+})(EmployFormFormixYup);
 
 export default EmployForm;
