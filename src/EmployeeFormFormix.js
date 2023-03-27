@@ -6,28 +6,23 @@ const EmployeeFormFormix = ({ Values }) => (
     <h1>Employee Form </h1>
     <form>
       Location
-      <input
-        type="checkbox"
-        name="manager"
-        checked={Values.manager}
-        name="manager"
-      />
+      <input type="checkbox" checked={Values.manager} name="manager" />
       <br />
       Name
-      <input type="text" name="empName" onChange={Values.empName} />
+      <input type="text" name="empName" value={Values.empName} />
       <br />
       <button type="Button">Submit</button>
     </form>
   </div>
 );
 
-const FormixEmployeeForm = withFormik({
+const EmployeeForm = withFormik({
   mapPropsToValues({ empName, manager }) {
     return {
-      manager: manager || false,
       empName: empName || '',
+      manager: empName || false,
     };
   },
 })(EmployeeFormFormix);
 
-export default FormixEmployeeForm;
+export default EmployeeForm;
