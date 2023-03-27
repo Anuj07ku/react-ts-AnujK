@@ -17,12 +17,12 @@ const EmployeeFormFormix = ({ Values }) => (
 );
 
 const EmployeeForm = withFormik({
-  mapPropsToValues({ empName, manager }) {
+  mapPropsToValues({ empNamevalue, managerValue }) {
     return {
-      empName: empName || '',
-      manager: empName || false,
-    };
-  },
+      empName: empNamevalue || '',
+      manager: managerValue || false,
+    }
+  }
 })(EmployeeFormFormix);
 
 export default EmployeeForm;
