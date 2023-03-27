@@ -2,16 +2,16 @@ import React from 'react';
 import { withFormik, Field } from 'formik';
 import * as Yup from 'yup';
 
-const EmployFormFormixYup = ({ values }) => (
+const EmployFormFormixYup = ({ error }) => (
   <div>
     <h1> Employee Form Formik Validation </h1>
     <form>
       <div>
         Employee Name
-        <Field type="text" name="empName" value={values.empName} />
+        <Field type="text" name="empName" />
         <br />
         Employee
-        <Field type="checkbox" name="manager" checked={values.manager} />
+        <Field type="checkbox" name="manager" />
         <br />
         <button type="submit">Submit </button>
       </div>
@@ -24,14 +24,14 @@ const EmployForm = withFormik({
     return {
       empName: empName || '',
       manager: manager || false,
-    };
-
-    validationSchema: Yup.object().shape({
-      empName: Yup.string()
-        .min(5, 'Employee Name Must be 5 charector long')
-        .required('Employee field can not be blank'),
-    });
+    }
   },
+
+  validationSchema: Yup.object().shape({
+    empName: Yup.string()
+      .min(5, 'Employee Name Must be 5 charector long')
+      .required('Employee field can not be blank'),
+  }),
 })(EmployFormFormixYup);
 
 export default EmployForm;
