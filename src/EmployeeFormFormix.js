@@ -1,20 +1,20 @@
 import React from 'react';
 import { withFormik } from 'formik';
 
-const EmployeeForm = ({ Values }) => (
+const EmployeeFormFormix = ({ Values }) => (
   <div>
     <h1>Employee Form </h1>
     <form>
-      Name
-      <input type="text" name="empName" onChange={Values.empName} />
-      <br />
       Location
       <input
-        name="manager"
         type="checkbox"
+        name="manager"
         checked={Values.manager}
         name="manager"
       />
+      <br />
+      Name
+      <input type="text" name="empName" onChange={Values.empName} />
       <br />
       <button type="Button">Submit</button>
     </form>
@@ -24,10 +24,10 @@ const EmployeeForm = ({ Values }) => (
 const FormixEmployeeForm = withFormik({
   mapPropsToValues({ empName, manager }) {
     return {
-      manager: manager || '',
-      empName: empName || false,
+      manager: manager || false,
+      empName: empName || '',
     };
   },
-})(EmployeeForm);
+})(EmployeeFormFormix);
 
 export default FormixEmployeeForm;
