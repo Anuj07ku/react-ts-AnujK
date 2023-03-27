@@ -1,13 +1,13 @@
 import React from 'react';
-import { withFormik } from 'formik';
+import { withFormik, Field } from 'formik';
 
 const EmployFormFormix = ({ values }) => (
   <div>
     <h1> Employee Form Formik</h1>
     <form>
       <div>
-        <input type="text" name="empName" value={values.empName} />
-        <input type="checkbox" name="manager" checked={values.manager} />
+        <Field type="text" name="empName" value={values.empName} />
+        <Field type="checkbox" name="manager" checked={values.manager} />
       </div>
     </form>
   </div>
