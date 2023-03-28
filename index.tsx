@@ -16,7 +16,7 @@ import { createRoot } from 'react-dom/client';
 //import App from './src/HOC/Hoc';
 //import App from './src/RendProps/RProp';
 //import App from './src/EmployFormFormix';
-import App from './src/EmployFormFormixYup';
+import App from './src/EmployFormFormixYup/formFormik';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
