@@ -1,4 +1,4 @@
 import React, { Component } from 'react';
-import CustomerList from './Components/EmployFormFormixYup';
+import EmployFormFormixYup from './components/EmployFormFormixYup';
 
 const App = () => <EmployFormFormixYup />;
