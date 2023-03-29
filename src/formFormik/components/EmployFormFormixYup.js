@@ -2,18 +2,18 @@ import React from 'react';
 import { withFormik, Field } from 'formik';
 import * as Yup from 'yup';
 
-const EmployFormFormixYup = ({ error }) => (
+const EmployFormFormixYup = ({ errors }) => (
   <div>
     <h1> Employee Form Formik Validation </h1>
     <form>
       <div>
         Employee Name
         <Field type="text" name="empName" />
-        <spam style="color:red">{error.empName}</spam>
+        {errors.empName}
         <br />
         Employee
         <Field type="checkbox" name="manager" />
-        {error.manager}
+        {errors.empName}
         <br />
         <button type="submit">Submit </button>
       </div>
