@@ -10,19 +10,15 @@ const EmployFormFormixYup = ({ values, errors, touched, isSubmiting }) => (
         Employee Name
         <Field type="text" name="empName" />
         <br />
-        {touched.empName && errors.empName && 
-          <spam style={{ color: 'red' }}>{errors.empName}</spam>
-        }
+        {errors.empName}
         <br />
         Employee
         <Field type="checkbox" name="manager" checked={values.manager} />
         <br />
-        {errors.manager && 
-          <spam style={{ color: 'red' }}>{errors.manager}</spam>
-        }
+        {errors.manager}
         <br />
         <button type="submit" disabled={isSubmiting}>
-          Submit{' '}
+          Submit
         </button>
       </div>
     </form>
@@ -42,8 +38,11 @@ const EmployForm = withFormik({
       .min(5, 'Employee Name Must be 5 charector long')
       .required('Employee field can not be blank'),
   }),
+  
   handleSubmit(values, { resetForm, setSubmitting, setErrors }) {
-    console.log(values);
+
+    alert('CHECK');
+//console.log(values);
     setTimeout(() => {
       if (values.empName === 'Anuj') {
         setErrors({ empName: 'Anuj can not be set as Employee Name' });
