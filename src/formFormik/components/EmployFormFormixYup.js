@@ -9,7 +9,7 @@ const EmployFormFormixYup = ({ error }) => (
       <div>
         Employee Name
         <Field type="text" name="empName" />
-        {error.empName}
+        <spam style="color:red">{error.empName}</spam>
         <br />
         Employee
         <Field type="checkbox" name="manager" />
