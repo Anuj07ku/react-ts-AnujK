@@ -13,7 +13,7 @@ const EmployFormFormixYup = ({ error }) => (
         <br />
         Employee
         <Field type="checkbox" name="manager" />
-        {error.empName}
+        {error.manager}
         <br />
         <button type="submit">Submit </button>
       </div>
