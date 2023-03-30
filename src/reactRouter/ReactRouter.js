@@ -1,7 +1,6 @@
 import React from 'react';
 import Allcommentpage from './Allcommentpage';
 import Aboutus from './Aboutus';
-import Notfound from './Notfound';
 
 import {
   BrowserRouter,
@@ -30,7 +29,7 @@ export default class ReactRouter extends React.Component {
       <BrowserRouter>
         <Links />
         <Routes>
-          <Route path="/:id" element={<Allcommentpage />} />
+          <Route path="/Comment/:id" element={<Allcommentpage />} />
           <Route path="/Aboutus" element={<Aboutus />} />
         </Routes>
       </BrowserRouter>
