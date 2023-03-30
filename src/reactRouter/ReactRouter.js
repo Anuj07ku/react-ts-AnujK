@@ -1,6 +1,8 @@
 import React from 'react';
 import Allcommentpage from './Allcommentpage';
 import Aboutus from './Aboutus';
+import Notfound from './Notfound';
+
 import {
   BrowserRouter,
   Routes,
@@ -8,13 +10,14 @@ import {
   redirect,
   NavLink,
   Switch,
+  Navigate,
 } from 'react-router-dom';
 
 class Links extends React.Component {
   render() {
     return (
       <nav>
-        <NavLink to="/"> Comment </NavLink>
+        <NavLink to="/Comment/:id"> Comment </NavLink>
         <NavLink to="/Aboutus"> Aboutus </NavLink>
       </nav>
     );
@@ -27,7 +30,7 @@ export default class ReactRouter extends React.Component {
       <BrowserRouter>
         <Links />
         <Routes>
-          <Route path="/" element={<Allcommentpage />} />
+          <Route path="/:id" element={<Allcommentpage />} />
           <Route path="/Aboutus" element={<Aboutus />} />
         </Routes>
       </BrowserRouter>

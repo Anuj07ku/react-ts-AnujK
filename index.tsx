@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 //import App from './App';
 //import App from './src/Functionaltest';
 //import App from './src/classtest';
-//import App from './src/Reusablecomponent';
+import App from './src/Reusablecomponent';
 //import App from './src/Reusablefunctionalcomponentprops';
 //import App from './src/EventHandler';
 //import App from './src/ReactState';
@@ -16,7 +16,7 @@ import { createRoot } from 'react-dom/client';
 //import App from './src/HOC/Hoc';
 //import App from './src/RendProps/RProp';
 //import App from './src/formFormik/formFomik';
-import App from './src/reactRouter/ReactRouter';
+//import App from './src/reactRouter/ReactRouter';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
